@@ -6,21 +6,14 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    class ItemPedido
+    public class ItemPedido
     {
 
-        public Produtos Produto { get; }
+        public Produto Produto { get; }
         public int Quantidade { get; }
         public decimal Subtotal => Produto.Preco * Quantidade;
 
-        public ItemPedido(Produtos produto, int quantidade)
-        {
-            if (quantidade <= 0)
-                throw new ArgumentException("A quantidade deve ser maior que zero.");
-
-            Produto = produto;
-            Quantidade = quantidade;
-        }
+       
 
     }
 }
