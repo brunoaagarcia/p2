@@ -13,5 +13,16 @@ namespace p2BRUNO
         public decimal Preco { get; private set; }
         public string Categoria { get; private set; }
 
+    
+      public CdProdutos(string nome, decimal preco, string categoria)
+      {
+            Id = Guid.NewGuid();
+            Nome = nome;
+            Preco = preco;
+            Categoria = categoria;
+      }
+
+
     }
+
 }
