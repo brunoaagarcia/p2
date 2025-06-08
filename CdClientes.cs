@@ -20,10 +20,18 @@ namespace p2BRUNO
             Nome = nome;
             Email = email;
             Cpf = cpf;
-       
+
+            if (string.IsNullOrWhiteSpace(nome))
+                throw new ArgumentException("Nome do cliente é obrigatório.");
+
+            if (string.IsNullOrWhiteSpace(email) || !email.Contains("@"))
+                throw new ArgumentException("Email inválido.");
+
+            if (string.IsNullOrWhiteSpace(cpf) || cpf.Length != 11)
+                throw new ArgumentException("CPF inválido.");
+
 
         }
 
-
-    }
+    }   
 }
