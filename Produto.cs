@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-     public class Produtos
+     public class Produto
     {
         public Guid Id { get; private set; }
         public string Nome { get; private set; }
@@ -14,7 +14,7 @@ namespace p2BRUNO
         public string Categoria { get; private set; }
 
     
-      public Produtos(string nome, decimal preco, string categoria)
+      public Produto(string nome, decimal preco, string categoria)
       {
             Id = Guid.NewGuid();
             Nome = nome;

@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    class Clientes
+    public class Cliente
     {
         public Guid Id { get; private set; }
         public string Nome { get; private set; }
         public string Email { get; private set; }
         public string Cpf { get; private set; }
 
-        public Clientes(string nome, string email, string cpf)
+        public Cliente(string nome, string email, string cpf)
         {
             Id= Guid.NewGuid();
             Nome = nome;
