@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    class CdProdutos
+     public class Produtos
     {
         public Guid Id { get; private set; }
         public string Nome { get; private set; }
@@ -14,7 +14,7 @@ namespace p2BRUNO
         public string Categoria { get; private set; }
 
     
-      public CdProdutos(string nome, decimal preco, string categoria)
+      public Produtos(string nome, decimal preco, string categoria)
       {
             Id = Guid.NewGuid();
             Nome = nome;
@@ -28,8 +28,7 @@ namespace p2BRUNO
             if (string.IsNullOrWhiteSpace(categoria))
                 throw new ArgumentException("Preencha o Campo(Categoria).");
 
-
-        }
+      }
 
 
     }
