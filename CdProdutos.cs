@@ -20,7 +20,16 @@ namespace p2BRUNO
             Nome = nome;
             Preco = preco;
             Categoria = categoria;
-      }
+
+            if (string.IsNullOrWhiteSpace(nome))
+                throw new ArgumentException("Preencha o campo(Produto).");
+            if (preco <= 0)
+                throw new ArgumentException("Preço deve ser maior que zero.");
+            if (string.IsNullOrWhiteSpace(categoria))
+                throw new ArgumentException("Preencha o Campo(Categoria).");
+
+
+        }
 
 
     }
