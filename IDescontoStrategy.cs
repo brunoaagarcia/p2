@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    interface IDescontoStrategy
+    public interface IDescontoStrategy
     {
+        decimal CalcularDesconto(ItemPedido item);
     }
 }
