@@ -8,6 +8,6 @@ namespace p2BRUNO
 {
     public interface IDescontoStrategy
     {
-        decimal CalcularDesconto(ItemPedido item);
+        decimal CalcularDesconto(Pedido pedido);
     }
 }

@@ -17,12 +17,11 @@ namespace p2BRUNO
             _percentual = percentual;
         }
 
-        public decimal CalcularDesconto(ItemPedido item)
+        public decimal CalcularDesconto(Pedido pedido)
         {
-            if (item.Produto.Categoria == _categoriaAlvo)
-                return item.Subtotal * _percentual;
-
-            return 0;
+            return pedido.Itens
+                         .Where(item => item.Produto.Categoria == _categoriaAlvo)
+                         .Sum(item => item.Subtotal * _percentual);
         }
     }
 }
