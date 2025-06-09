@@ -19,6 +19,8 @@ namespace p2BRUNO
 
         public decimal CalcularDesconto(ItemPedido item)
         {
+            if (item.Quantidade >= _quantidadeMinima)
+                return item.Subtotal * _percentual;
 
             return 0;
         }
