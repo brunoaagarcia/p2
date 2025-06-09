@@ -14,6 +14,21 @@ namespace p2BRUNO
         public List<ItemPedido> Itens { get; }
         public DateTime Data { get; }
         public decimal ValorTotal => Itens.Sum(item => item.Subtotal);
-        
-    } 
+
+        public Pedido(Cliente cliente, List<ItemPedido> itens)
+        {
+            if (cliente == null)
+                throw new ArgumentNullException(nameof(cliente));
+            if (itens == null || !itens.Any())
+                throw new ArgumentException("O pedido deve conter pelo menos um item.");
+
+            Id = Guid.NewGuid();
+            Cliente = cliente;
+            Itens = itens;
+            Data = DateTime.Now;
+
+
+
+        }
+    }
 }
