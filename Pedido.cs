@@ -7,8 +7,9 @@ using p2BRUNO;
 
 namespace p2BRUNO
 {
-    class Pedidos
+    public class Pedido
     {
+
 
 
     }
