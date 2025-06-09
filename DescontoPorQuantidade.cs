@@ -17,12 +17,20 @@ namespace p2BRUNO
             _percentual = percentual;
         }
 
-        public decimal CalcularDesconto(ItemPedido item)
+        public decimal CalcularDesconto(Pedido pedido)
         {
-            if (item.Quantidade >= _quantidadeMinima)
-                return item.Subtotal * _percentual;
+            decimal desconto = 0;
 
-            return 0;
+            foreach (var item in pedido.Itens)
+            {
+                if (item.Quantidade >= _quantidadeMinima)
+                {
+                    desconto += item.Subtotal * _percentual;
+                }
+            }
+
+            return desconto;
         }
     }
 }
+
