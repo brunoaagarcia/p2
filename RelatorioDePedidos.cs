@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    public class RelatorioClientes
+    public class RelatorioDePedidos
     {
         public void Gerar(List<Pedido> pedidos)
         {
