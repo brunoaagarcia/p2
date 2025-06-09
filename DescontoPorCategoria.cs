@@ -6,7 +6,23 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    class DescontoPorCategoria
+    public class DescontoPorCategoria : IDescontoStrategy
     {
+        private readonly string _categoriaAlvo;
+        private readonly decimal _percentual;
+
+        public DescontoPorCategoria(string categoriaAlvo, decimal percentual)
+        {
+            _categoriaAlvo = categoriaAlvo;
+            _percentual = percentual;
+        }
+
+        public decimal CalcularDesconto(ItemPedido item)
+        {
+            if (item.Produto.Categoria == _categoriaAlvo)
+                return item.Subtotal * _percentual;
+
+            return 0;
+        }
     }
 }
