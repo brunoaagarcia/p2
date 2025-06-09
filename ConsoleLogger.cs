@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    class ConsoleLogger
+    public class ConsoleLogger : ILogger
     {
+        public void Log(string mensagem)
+        {
+            Console.WriteLine($"[LOG] {mensagem}");
+        }
     }
 }

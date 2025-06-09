@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace p2BRUNO
 {
-    interface ILogger
+    public interface ILogger
     {
+        void Log(string mensagem);
     }
 }
