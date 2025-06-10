@@ -27,7 +27,7 @@ namespace p2BRUNO
             if (string.IsNullOrWhiteSpace(email) || !email.Contains("@"))
                 throw new ArgumentException("Email inválido.");
 
-            if (string.IsNullOrWhiteSpace(cpf) || cpf.Length != 11)
+            if (string.IsNullOrWhiteSpace(cpf)) 
                 throw new ArgumentException("CPF inválido.");
 
 
